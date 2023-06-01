@@ -64,8 +64,9 @@ public class ChangeAndRandom {
                     random.setSeed(System.currentTimeMillis());
                     int rnum = random.nextInt(5);
                     if (0 < list.get(rnum).cnt && list.get(rnum).price <= money) {
-                        money -= drk.price;
-                        drk.cnt--;
+                        money -= 800;
+                        list.get(rnum).cnt--;
+                        list.get(5).cnt--;
                         break;
                     } else {
                         boolean flag = check(money);
